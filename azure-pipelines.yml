@@ -10,15 +10,16 @@ pool:
   name: sunil's pool
 
 
-
-steps:
-- task: Maven@3
+- task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '21'
-    jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    javaHomeOption: 'Path'
+    jdkDirectory: '/opt/jdk-21.0.1/bin/java'
+    mavenVersionOption: 'Path'
+    mavenDirectory: '/home/ec2-user/apache-maven-3.9.5/bin/mvn'
+    mavenSetM2Home: false
+    mavenAuthenticateFeed: true
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
