@@ -6,8 +6,12 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: 
+  name: sunil's pool
+
+agent:
+  machine: sunil's agent
+
 
 steps:
 - task: Maven@3
