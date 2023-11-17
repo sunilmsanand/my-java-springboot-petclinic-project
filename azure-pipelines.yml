@@ -9,7 +9,6 @@ trigger:
 pool: 
   name: sunil's pool
 
-
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
